@@ -38,6 +38,7 @@ function seconds (){
 
 //runs function after html document loads
 window.onload = function() {
+    timeStamp(); //runs once without delay    
     setInterval(function(){ timeStamp() }, 1000); //dynamic page - runs every 1 second
     setInterval(function(){ seconds() }, 500) //runs twice per second
 }
