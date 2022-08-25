@@ -1,0 +1,43 @@
+/* CSS comment */
+
+body {
+    background-color: rosybrown;
+}
+
+body:hover {
+    background-color: salmon;
+}
+
+.daily {
+    background-color:black;
+    border-bottom: 0px;
+    border-color: #151b54;
+    border-radius: 5px;
+    border-style: solid;
+    box-shadow: 8px 8px 6px -2px #250517;
+    color: steelblue;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Lobster;
+    font-size: 30px;
+    font-weight: lighter;
+    letter-spacing: 2.5px;
+    padding-bottom: 2px;
+    padding-left: 65px;
+    padding-top: 2px;
+    position: absolute;
+    top: 125px;
+    left: 75px;
+    width: 1000px;
+}
+
+.daily:hover {
+    border-color: #2b3856;
+    box-shadow: 8px 8px 6px -2px #7e587e;
+    color: cyan;
+    text-shadow: 3px 3px 3px #6a287e;
+}
+
+.hide {
+    visibility:hidden;
+}
