@@ -10,25 +10,21 @@ body:hover {
 
 .daily {
     background-color:black;
-    border-bottom: 0px;
+    border-bottom: 0;
     border-color: #151b54;
     border-radius: 5px;
     border-style: solid;
-    box-shadow: 8px 8px 6px -2px #250517;
+    box-shadow: 6px 8px 6px -2px #250517;
     color: steelblue;
     cursor: pointer;
-    display: inline-block;
     font-family: Lobster;
     font-size: 30px;
-    font-weight: lighter;
     letter-spacing: 2.5px;
-    padding-bottom: 2px;
-    padding-left: 65px;
-    padding-top: 2px;
-    position: absolute;
-    top: 125px;
-    left: 75px;
-    width: 1000px;
+    padding: 2px 20px 4px 20px;
+    text-align:center;
+    margin:15% auto;
+    min-width: 400px;
+    max-width: 600px;
 }
 
 .daily:hover {
