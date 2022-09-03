@@ -1,19 +1,31 @@
-/* CSS comment */
+/* CSS comment 
 
-body {
-    background-color: rosybrown;
-    margin:0;
+html, body {
+    /height:100%;
+    /margin:0;
 }
 
-body:hover {
-    background-color: salmon;
+*/
+
+.box {
+    background: linear-gradient(black, rosybrown, black);
+    height:100vh;
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+}
+
+.box:hover {
+    background: linear-gradient(black, salmon, black);
 }
 
 .daily {
     background-color:black;
     border-bottom: 0;
     border-color: #151b54;
-    border-radius: 5px;
+    border-radius: 10px;
     border-style: solid;
     box-shadow: 6px 8px 6px -2px #250517;
     color: steelblue;
@@ -21,11 +33,15 @@ body:hover {
     font-family: Lobster;
     font-size: 30px;
     letter-spacing: 2.5px;
+    margin:auto;
     padding: 2px 10px 4px 10px;
     text-align:center;
-    margin:20% auto;
-    min-width: 400px;
-    max-width: 600px;
+    min-width: 390px;
+    max-width: 650px;
+    position:absolute;
+    top:50%;
+    left:1%;
+    right:1%;
 }
 
 .daily:hover {
