@@ -7,7 +7,7 @@ html, body {
 }
 
 .box {
-    background: linear-gradient(black, rosybrown, black);
+    background: linear-gradient(black , rosybrown , black );
     height:100vh;
     position:absolute;
     top:0;
@@ -17,7 +17,7 @@ html, body {
 }
 
 .box:hover {
-    background: linear-gradient(black, salmon, black);
+    background: linear-gradient(black , salmon , black );
 }
 
 .daily {
@@ -39,7 +39,7 @@ html, body {
     text-align:center;
 
     position:absolute;
-    top:50%;
+    top:45%;
     left:0;
     right:0;
 }
