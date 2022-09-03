@@ -1,10 +1,10 @@
 /* CSS comment */
 
 html, body {
+    background-color: black;
     height:100%;
     margin:0;
 }
-
 
 .box {
     background: linear-gradient(black, rosybrown, black);
@@ -33,10 +33,11 @@ html, body {
     font-size: 30px;
     letter-spacing: 2.5px;
     margin:auto;
+    max-width: 650px;
+    min-width: 390px;
     padding: 2px 5px 6px;
     text-align:center;
-    min-width: 390px;
-    max-width: 650px;
+
     position:absolute;
     top:50%;
     left:0;
