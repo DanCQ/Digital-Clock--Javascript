@@ -1,56 +1,64 @@
 /* CSS comment */
 
-html, body {
-    background-color: black;
-    height:100%;
-    margin:0;
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  min-height: 100%;
+  font-family: "Roboto", sans-serif;
 }
 
 .box {
-    background: linear-gradient(black , rosybrown , black );
-    height:100vh;
-    position:absolute;
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;
+  background-color: rgb(0, 0, 0);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
 .box:hover {
-    background: linear-gradient(black , salmon , black );
+  background-color: rgba(26, 26, 26, 0.1);
 }
 
 .daily {
-    background-color:black;
-    border-bottom: 0;
-    border-color: #151b54;
-    border-radius: 10px;
-    border-style: solid;
-    box-shadow: 6px 8px 6px -2px #250517;
-    color: steelblue;
-    cursor: pointer;
-    font-family: Lobster;
-    font-size: 30px;
-    letter-spacing: 2.5px;
-    margin:auto;
-    max-width: 650px;
-    min-width: 390px;
-    padding: 2px 5px 6px;
-    text-align:center;
-
-    position:absolute;
-    top:45%;
-    left:0;
-    right:0;
+  cursor: pointer;
+  font-size: 27.5px;
+  letter-spacing: 2.5px;
+  max-width: 65%;
+  padding: 45px 45px;
+  font-weight: 500;
+  background: rgba(105, 103, 103, 0.21);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(9px);
+  border: 1px solid rgba(234, 230, 230, 0.13);
+  text-align: center;
+  line-height: 47.5px;
 }
 
 .daily:hover {
-    border-color: #2b3856;
-    box-shadow: 8px 8px 6px -2px #7e587e;
-    color: cyan;
-    text-shadow: 3px 3px 3px #6a287e;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  transition: box-shadow 0.3s ease;
 }
 
 .hide {
-    visibility:hidden;
+  visibility: hidden;
+}
+
+@media screen and (max-width: 811px) {
+  .daily {
+    font-size: 25px;
+    max-width: 70%;
+  }
 }
