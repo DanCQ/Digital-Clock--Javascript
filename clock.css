@@ -12,6 +12,7 @@ html {
 }
 
 body {
+  background-color: black;
   height: 100%;
   font-family:  Roboto, "Arial Rounded MT Bold", sans-serif;
   overflow: hidden;
@@ -19,7 +20,7 @@ body {
 
 .box {
   align-items: center;
-  background-color: azure;
+  background-color: black;
   height: 100vh;
   display: flex;
   justify-content: center;
