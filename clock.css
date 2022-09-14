@@ -41,9 +41,9 @@ body {
   font-weight: 500;
   letter-spacing: 2.5px;
   line-height: 47.5px;
-  max-width: 65%;
-  min-width:235px;
-  padding: 45px 45px;
+  max-width: 70%;
+  min-width:300px;
+  padding: 45px;
   text-align: center;
 }
 
@@ -59,7 +59,7 @@ body {
 @media screen and (max-width: 811px) {
   .daily {
     font-size: 25px;
-    max-width: 70%;
+    padding: 45px 35px;
   }
 
 }
