@@ -39,7 +39,7 @@ function timeStamp() {
 
   //inserts time into html document
   var first = document.getElementById("first");
-  first.innerHTML = weekDay + ", " + month + " " + day + ", " + year + ".";
+  first.innerHTML = weekDay + ", " + month + " " + day + ", " + year;
 
   var second = document.getElementById("second");
   second.innerHTML = hours;
