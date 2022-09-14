@@ -43,7 +43,7 @@ body {
   line-height: 47.5px;
   max-width: 70%;
   min-width: 280px;
-  padding: 40px 45px;
+  padding: 25px 50px 20px 50px;
   text-align: center;
 }
 
@@ -59,6 +59,7 @@ body {
 @media screen and (max-width: 811px) {
   .daily {
     font-size: 25px;
+    max-width:65%;
     padding: 30px;
   }
 
