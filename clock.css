@@ -12,18 +12,17 @@ html {
 }
 
 body {
-  background-color: white;
-  min-height: 100%;
-  font-family: "Roboto", sans-serif;
+  height: 100%;
+  font-family:  Roboto, "Arial Rounded MT Bold", sans-serif;
+  overflow: hidden;
 }
 
 .box {
-  background-color: rgb(0, 0, 0);
-  min-height: 100vh;
+  align-items: center;
+  background-color: azure;
+  height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
-  overflow: hidden;
 }
 
 .box:hover {
@@ -31,20 +30,21 @@ body {
 }
 
 .daily {
-  cursor: pointer;
-  font-size: 27.5px;
-  letter-spacing: 2.5px;
-  max-width: 65%;
-  padding: 45px 45px;
-  font-weight: 500;
-  background: rgba(105, 103, 103, 0.21);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(9px);
+  background: rgba(105, 103, 103, 0.21);
   border: 1px solid rgba(234, 230, 230, 0.13);
-  text-align: center;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 27.5px;
+  font-weight: 500;
+  letter-spacing: 2.5px;
   line-height: 47.5px;
+  max-width: 65%;
+  min-width:250px;
+  padding: 45px 45px;
+  text-align: center;
 }
 
 .daily:hover {
@@ -61,4 +61,5 @@ body {
     font-size: 25px;
     max-width: 70%;
   }
+
 }
