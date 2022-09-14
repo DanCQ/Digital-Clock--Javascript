@@ -66,9 +66,9 @@ function seconds() {
 
 //? Ensures background properties remain at full size.
 const backgroundProperties = function (box) {
-  box.style.backgroundPosition = `center`;
-  box.style.backgroundRepeat = `no-repeat`;
-  box.style.backgroundSize = `cover`;
+  box.style.backgroundPosition = 'center';
+  box.style.backgroundRepeat = 'no-repeat';
+  box.style.backgroundSize = 'cover';
 };
 
 
@@ -78,23 +78,23 @@ const backgroundUI = function (e) {
   var background = document.querySelector(".box"); //selects html element
   var timeClock = document.querySelector(".daily");
 
-  if (e >= 6 && e <= 11) {
+  if (e >= 6 && e <= 10) {
     // console.log(background);
     background.style.background = 'url(https://i.postimg.cc/K8zpGz1c/1.jpg)';
     backgroundProperties(background);
     timeClock.style.color = "black";
   }
-  if (e > 11 && e <= 15) {
+  if (e >= 11 && e <= 15) {
     background.style.background = 'url(https://i.postimg.cc/qvhcDCtK/2.jpg)';
     backgroundProperties(background);
     timeClock.style.color = "black";
   }
-  if (e > 15 && e <= 20) {
+  if (e >= 16 && e <= 20) {
     background.style.background = 'url(https://i.postimg.cc/QMcQhGJx/3.jpg)';
     backgroundProperties(background);
     timeClock.style.color = "white";
   }
-  if (e > 20 || e < 6) {
+  if (e >= 21 || e <= 5) {
     background.style.background = 'url(https://i.postimg.cc/Y0DgbpM8/4.jpg)';
     backgroundProperties(background);
     timeClock.style.color = "white";
