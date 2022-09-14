@@ -38,14 +38,14 @@ function timeStamp() {
   var dayLight = time.substring(time.search("M") - 2, time.search("M") + 1); //display two spaces before M & include M
 
   //inserts time into html document
-  var first = document.getElementById("first");
-  first.innerHTML = weekDay + ", " + month + " " + day + ", " + year;
+  var calendar = document.getElementById("calendar");
+  calendar.innerHTML = weekDay + ", " + month + " " + day + ", " + year;
 
-  var second = document.getElementById("second");
-  second.innerHTML = hours;
+  var hh = document.getElementById("hh"); //hour display
+  hh.innerHTML = hours;
 
-  var third = document.getElementById("third");
-  third.innerHTML = minutes + dayLight;
+  var mm = document.getElementById("mm"); //minute display
+  mm.innerHTML = minutes + dayLight;
 
   return hours;
 }
@@ -78,24 +78,24 @@ const backgroundUI = function (e) {
   var background = document.querySelector(".box"); //selects html element
   var timeClock = document.querySelector(".daily");
 
-  if (e >= 6 && e <= 12) {
+  if (e >= 6 && e <= 11) {
     // console.log(background);
-    background.style.background = `url(images/1.jpg)`;
+    background.style.background = 'url(images/1.jpg)';
     backgroundProperties(background);
     timeClock.style.color = "black";
   }
-  if (e > 12 && 3 <= 15) {
-    background.style.background = `url(images/2.jpg)`;
+  if (e > 11 && e <= 15) {
+    background.style.background = 'url(images/2.jpg)';
     backgroundProperties(background);
     timeClock.style.color = "black";
   }
-  if (e > 15 && 3 <= 19) {
+  if (e > 15 && e <= 20) {
     background.style.background = 'url(images/3.jpg)';
     backgroundProperties(background);
     timeClock.style.color = "white";
   }
-  if (e > 19 || e < 6) {
-    background.style.background = `url(images/4.jpg)`;
+  if (e > 20 || e < 6) {
+    background.style.background = 'url(images/4.jpg)';
     backgroundProperties(background);
     timeClock.style.color = "white";
   }
@@ -108,7 +108,7 @@ window.onload = function () {
   timeStamp(); //runs once without delay
   backgroundUI(currentHour); //runs once without delay
   
-  setInterval (function () { backgroundUI(currentHour); }, 1000); //avoids a refresh to see background change
+  setInterval (function () { backgroundUI(currentHour); }, 1000 * 60 ); //avoids a refresh to see background change (runs every minute)
   
   setInterval(function () { timeStamp(); }, 1000); //keeps time running every second (millisecond)
   setInterval(function () { seconds(); }, 1000 / 2); //runs twice per second (millisecond)
