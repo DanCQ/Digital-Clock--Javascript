@@ -1,6 +1,4 @@
-//gets local date & time for use w/ backgroundUI() function
-const currentHour = new Date().getHours(); 
-
+//Gets calendar & clock text display
 function timeStamp() {
   var monthArray = [
     "January",
@@ -33,7 +31,7 @@ function timeStamp() {
   var year = date.getFullYear(); //current year
   var weekDay = weekDayArray[date.getDay()]; //number of weekday for array
 
-  const hours = time.substring(0, time.search(":")); //display string from 0 to first :
+  var hours = time.substring(0, time.search(":")); //display string from 0 to first :
   var minutes = time.substring(time.search(":") + 1, time.lastIndexOf(":")); //display from after first : to before last :
   var dayLight = time.substring(time.search("M") - 2, time.search("M") + 1); //display two spaces before M & include M
 
@@ -47,7 +45,6 @@ function timeStamp() {
   var mm = document.getElementById("mm"); //minute display
   mm.innerHTML = minutes + dayLight;
 
-  return hours;
 }
 
 //creates a blinking effect for the colon (the seconds indicator)
@@ -78,37 +75,44 @@ const backgroundUI = function (e) {
   var background = document.querySelector(".box"); //selects html element
   var timeClock = document.querySelector(".daily");
 
-  if (e >= 6 && e <= 10) {
+  if (e >= 6 && e <= 11) {
     // console.log(background);
     background.style.background = 'url(https://i.postimg.cc/K8zpGz1c/1.jpg)';
     backgroundProperties(background);
     timeClock.style.color = "black";
   }
-  if (e >= 11 && e <= 15) {
+  if (e >= 12 && e <= 17) {
     background.style.background = 'url(https://i.postimg.cc/qvhcDCtK/2.jpg)';
     backgroundProperties(background);
     timeClock.style.color = "black";
   }
-  if (e >= 16 && e <= 20) {
+  if (e >= 18 && e <= 22) {
     background.style.background = 'url(https://i.postimg.cc/QMcQhGJx/3.jpg)';
     backgroundProperties(background);
     timeClock.style.color = "white";
   }
-  if (e >= 21 || e <= 5) {
+  if (e >= 23 || e <= 5) {
     background.style.background = 'url(https://i.postimg.cc/Y0DgbpM8/4.jpg)';
     backgroundProperties(background);
     timeClock.style.color = "white";
   }
 };
 
+//gets local date & time for use w/ backgroundUI() function
+const currentHour = function () {
+  var hourNow = new Date().getHours();
+
+  return hourNow;
+}
+
 
 //runs function after html document loads
 window.onload = function () {
   
   timeStamp(); //runs once without delay
-  backgroundUI(currentHour); //runs once without delay
-  
-  setInterval (function () { backgroundUI(currentHour); }, 1000 * 60 ); //avoids a refresh to see background change (runs every minute)
+  backgroundUI(currentHour()); //runs once without delay
+
+  setInterval(function () { backgroundUI(currentHour()); }, 1000 * 60 ); //avoids a refresh to see background change (runs every minute)
   
   setInterval(function () { timeStamp(); }, 1000); //keeps time running every second (millisecond)
   setInterval(function () { seconds(); }, 1000 / 2); //runs twice per second (millisecond)
