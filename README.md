@@ -7,5 +7,5 @@ with a matching background image.
 
 <a href="https://digital-clock--javascript.pages.dev/">Digital Clock</a>
 
-It's been artistically improved by collaborators. <br />
-I hope you can use it.
+--Artistically improved by collaborator <a href="https://github.com/abitsalihu">Abit</a> <br />
+
