@@ -7,6 +7,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 html {
   box-sizing: border-box;
 }
@@ -14,7 +15,7 @@ html {
 body {
   background-color: black;
   height: 100%;
-  font-family:  Roboto, "Arial Rounded MT Bold", sans-serif;
+  font-family: Roboto, "Arial Rounded MT Bold", sans-serif;
   overflow: hidden;
 }
 
@@ -60,8 +61,8 @@ body {
 @media screen and (max-width: 811px) {
   .daily {
     font-size: 25px;
-    max-width:65%;
-    padding: 30px;
+    max-width:60%;
+    padding: 25px;
   }
 
 }
