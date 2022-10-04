@@ -1,6 +1,6 @@
 //Gets calendar & clock text display
 function timeStamp() {
-  var monthArray = [
+  const monthArray = [
     "January",
     "February",
     "March",
@@ -14,7 +14,7 @@ function timeStamp() {
     "November",
     "December",
   ];
-  var weekDayArray = [
+  const weekdayArray = [
     "Sunday",
     "Monday",
     "Tuesday",
@@ -24,32 +24,31 @@ function timeStamp() {
     "Saturday",
   ];
 
-  var date = new Date(); //gets your local date & time
-  var day = date.getDate(); //number of day in the current month
-  var month = monthArray[date.getMonth()]; //number of month for array
-  var time = date.toLocaleTimeString(); //a time string value
-  var year = date.getFullYear(); //current year
-  var weekDay = weekDayArray[date.getDay()]; //number of weekday for array
+  const date = new Date(); //gets your local date & time
+  const day = date.getDate(); //number of day in the current month
+  const month = monthArray[date.getMonth()]; //number of month for array
+  const time = date.toLocaleTimeString(); //a time string value
+  const year = date.getFullYear(); //current year
+  const weekday = weekdayArray[date.getDay()]; //number of weekday for array
 
-  var hours = time.substring(0, time.search(":")); //display string from 0 to first :
-  var minutes = time.substring(time.search(":") + 1, time.lastIndexOf(":")); //display from after first : to before last :
-  var dayLight = time.substring(time.search("M") - 2, time.search("M") + 1); //display two spaces before M & include M
+  const hours = time.substring(0, time.search(":")); //display string from 0 to first :
+  const minutes = time.substring(time.search(":") + 1, time.lastIndexOf(":")); //display from after first : to before last :
+  const daylight = time.substring(time.search("M") - 2, time.search("M") + 1); //display two spaces before M & include M
 
   //inserts time into html document
-  var calendar = document.getElementById("calendar");
-  calendar.innerHTML = weekDay + ", " + month + " " + day + ", " + year;
+  const calendar = document.getElementById("calendar");
+  calendar.innerHTML = weekday + ", " + month + " " + day + ", " + year;
 
-  var hh = document.getElementById("hh"); //hour display
+  const hh = document.getElementById("hh"); //hour display
   hh.innerHTML = hours;
 
-  var mm = document.getElementById("mm"); //minute display
-  mm.innerHTML = minutes + dayLight;
-
+  const mm = document.getElementById("mm"); //minute display
+  mm.innerHTML = minutes + daylight;
 }
 
 //creates a blinking effect for the colon (the seconds indicator)
 function seconds() {
-  var colon = document.getElementById("colon");
+  const colon = document.getElementById("colon");
 
   if (colon.className != "hide") {
     colon.className = "hide";
@@ -72,8 +71,8 @@ const backgroundProperties = function (box) {
 //? Change background image based on user's time w/ const(currentHour)
 const backgroundUI = function (e) {
 
-  var background = document.querySelector(".box"); //selects html element
-  var timeClock = document.querySelector(".daily");
+  const background = document.querySelector(".box"); //selects container background
+  const timeClock = document.querySelector(".clock"); //selects clock face
 
   if (e >= 6 && e <= 11) {
     // console.log(background);
@@ -100,7 +99,7 @@ const backgroundUI = function (e) {
 
 //gets local date & time for use w/ backgroundUI() function
 const currentHour = function () {
-  var hourNow = new Date().getHours();
+  const hourNow = new Date().getHours();
 
   return hourNow;
 }
