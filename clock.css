@@ -31,7 +31,7 @@ body {
   background-color: rgba(26, 26, 26, 0.1);
 }
 
-.daily {
+.clock {
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(9px);
   background: rgba(105, 103, 103, 0.21);
@@ -49,7 +49,7 @@ body {
   text-align: center;
 }
 
-.daily:hover {
+.clock:hover {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
   transition: box-shadow 0.3s ease;
 }
