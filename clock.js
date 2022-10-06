@@ -37,7 +37,7 @@ function timeStamp() {
 
   //inserts time into html document
   const calendar = document.getElementById("calendar");
-  calendar.innerHTML = weekday + ", " + month + " " + day + ", " + year;
+  calendar.innerHTML = `${weekday}, ${month} ${day}, ${year}`;
 
   const hh = document.getElementById("hh"); //hour display
   hh.innerHTML = hours;
@@ -48,8 +48,9 @@ function timeStamp() {
 
 //creates a blinking effect for the colon (the seconds indicator)
 function seconds() {
+  
   const colon = document.getElementById("colon");
-
+  
   if (colon.className != "hide") {
     colon.className = "hide";
     return colon;
