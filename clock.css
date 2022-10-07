@@ -23,6 +23,7 @@ body {
   align-items: center;
   background-color: black;
   min-height: 100vh;
+  min-width:100vw;
   display: flex;
   justify-content: center;
 }
@@ -52,6 +53,23 @@ body {
 .clock:hover {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
   transition: box-shadow 0.3s ease;
+}
+
+.contact {
+  font-family: "zapfino", "luminari", "Academy Engraved Let";
+  font-size:larger;
+  position:absolute;
+  top:25%;
+}
+
+.contact a {
+  color:transparent;
+  text-decoration: none;
+}
+
+.contact a:hover {
+  color: black;
+  text-shadow: 0px 0px 2px lightsteelblue;
 }
 
 .hide {
