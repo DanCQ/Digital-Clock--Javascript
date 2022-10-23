@@ -61,14 +61,6 @@ function seconds() {
 }
 
 
-//? Ensures background properties remain at full size.
-const backgroundProperties = function (box) {
-  box.style.backgroundPosition = 'center';
-  box.style.backgroundRepeat = 'no-repeat';
-  box.style.backgroundSize = 'cover';
-};
-
-
 //? Change background image based on user's time w/ const(currentHour)
 const backgroundUI = function (e) {
 
@@ -77,25 +69,25 @@ const backgroundUI = function (e) {
 
   if (e >= 6 && e <= 11) {
     // console.log(background);
-    background.style.background = 'url(images/1.jpg)';
-    backgroundProperties(background);
+    background.style.background = 'url(https://i.postimg.cc/K8zpGz1c/1.jpg)';
     timeClock.style.color = "black";
   }
   if (e >= 12 && e <= 17) {
-    background.style.background = 'url(images/2.jpg)';
-    backgroundProperties(background);
+    background.style.background = 'url(https://i.postimg.cc/qvhcDCtK/2.jpg)';
     timeClock.style.color = "black";
   }
   if (e >= 18 && e <= 22) {
-    background.style.background = 'url(images/3.jpg)';
-    backgroundProperties(background);
+    background.style.background = 'url(https://i.postimg.cc/QMcQhGJx/3.jpg)';
     timeClock.style.color = "white";
   }
   if (e >= 23 || e <= 5) {
-    background.style.background = 'url(images/4.jpg)';
-    backgroundProperties(background);
+    background.style.background = 'url(https://i.postimg.cc/Y0DgbpM8/4.jpg)';
     timeClock.style.color = "white";
   }
+
+  background.style.backgroundPosition = 'center';
+  background.style.backgroundRepeat = 'no-repeat';
+  background.style.backgroundSize = 'cover';
 };
 
 //gets local date & time for use w/ backgroundUI() function
@@ -107,7 +99,7 @@ const currentHour = function () {
 
 
 //runs function after html document loads
-window.onload = function () {
+window.onload = function() {
   
   timeStamp(); //runs once without delay
   backgroundUI(currentHour()); //runs once without delay
