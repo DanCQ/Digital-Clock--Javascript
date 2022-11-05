@@ -7,7 +7,6 @@
 }
 
 a {
-  color:transparent;
   text-decoration: none;
 }
 
@@ -51,6 +50,7 @@ body {
 }
 
 .contact {
+  color:transparent;
   font-family: "zapfino", "luminari", "Academy Engraved Let";
   font-size:medium;
   position:absolute;
