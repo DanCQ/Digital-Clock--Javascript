@@ -1,5 +1,25 @@
+const background = document.querySelector(".background"); //selects container background
+const clock = document.querySelector(".clock"); //selects clock face
+
+
+//allows clear view of the background picture
+clock.addEventListener("click", function() {
+  
+  background.style.backgroundSize = "contain";
+  clock.style.visibility = "hidden";
+
+  //sets everything back to normal
+  setTimeout(function() {
+    background.style.backgroundSize = "cover";
+    clock.style.visibility = "visible";
+  },5000); //waits 5 seconds to run
+
+});
+
+
 //Gets calendar & clock text display
 function timeStamp() {
+
   const monthArray = [
     "January",
     "February",
@@ -14,6 +34,7 @@ function timeStamp() {
     "November",
     "December",
   ];
+
   const weekdayArray = [
     "Sunday",
     "Monday",
@@ -61,28 +82,25 @@ function seconds() {
 }
 
 
-//? Change background image based on user's time w/ const(currentHour)
-const backgroundUI = function (e) {
+//Changes background image based on user's time w/ const(currentHour)
+const backgroundUI = function (hour) {
+  
+  if (hour >= 5 && hour <= 9) {
 
-  const background = document.querySelector(".box"); //selects container background
-  const timeClock = document.querySelector(".clock"); //selects clock face
-
-  if (e >= 5 && e <= 9) {
-    // console.log(background);
     background.style.background = 'url(https://i.postimg.cc/K8zpGz1c/1.jpg)';
-    timeClock.style.color = "black";
+    clock.style.color = "black";
   }
-  if (e >= 10 && e <= 15) {
+  if (hour >= 10 && hour <= 15) {
     background.style.background = 'url(https://i.postimg.cc/qvhcDCtK/2.jpg)';
-    timeClock.style.color = "black";
+    clock.style.color = "black";
   }
-  if (e >= 16 && e <= 20) {
+  if (hour >= 16 && hour <= 20) {
     background.style.background = 'url(https://i.postimg.cc/QMcQhGJx/3.jpg)';
-    timeClock.style.color = "white";
+    clock.style.color = "white";
   }
-  if (e >= 21 || e <= 4) {
-    background.style.background = 'url(https://i.postimg.cc/Y0DgbpM8/4.jpg)';
-    timeClock.style.color = "white";
+  if (hour >= 21 || hour <= 4) {
+    background.style.background =  'url(https://i.postimg.cc/Y0DgbpM8/4.jpg)';
+    clock.style.color = "white";
   }
 
   background.style.backgroundPosition = 'center';
@@ -92,20 +110,21 @@ const backgroundUI = function (e) {
 
 //gets local date & time for use w/ backgroundUI() function
 const currentHour = function () {
-  const hourNow = new Date().getHours();
 
+  const hourNow = new Date().getHours();
   return hourNow;
-}
+};
 
 
 //runs function after html document loads
 window.onload = function() {
   
   timeStamp(); //runs once without delay
-  backgroundUI(currentHour()); //runs once without delay
-
-  setInterval(function () { backgroundUI(currentHour()); }, 1000 * 60 ); //avoids a refresh to see background change (runs every minute)
+  backgroundUI( currentHour() ); //runs once without delay
   
-  setInterval(function () { timeStamp(); }, 1000); //keeps time running every second (millisecond)
-  setInterval(function () { seconds(); }, 1000 / 2); //runs twice per second (millisecond)
+  //avoids a refresh to see background change (runs every minute)
+  setInterval(function () { backgroundUI( currentHour() ) }, 1000 * 60 ); 
+  
+  setInterval(function () { timeStamp() }, 1000); //keeps time running every second (millisecond)
+  setInterval(function () { seconds() }, 1000 / 2); //runs twice per second (millisecond)
 };
