@@ -8,6 +8,11 @@
   box-sizing: border-box;
 }
 
+a {
+  color:transparent;
+  text-decoration: none;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -20,12 +25,12 @@ body {
 }
 
 .box {
-  align-items: center;
   background-color: black;
   min-height: 100vh;
   min-width:100vw;
   display: flex;
-  justify-content: center;
+    align-items: center;
+    justify-content: center;
 }
 
 .box:hover {
@@ -59,15 +64,12 @@ body {
   font-family: "zapfino", "luminari", "Academy Engraved Let";
   font-size:medium;
   position:absolute;
-  top:25%;
+    right:28%;
+    top:-50px;
+  
 }
 
-.contact a {
-  color:transparent;
-  text-decoration: none;
-}
-
-.contact a:hover {
+.contact:hover {
   color: black;
   text-shadow: 0px 0px 2px lightsteelblue;
 }
@@ -77,10 +79,16 @@ body {
 }
 
 @media screen and (max-width: 811px) {
-  .daily {
+
+  .clock {
     font-size: 25px;
     max-width:60%;
-    padding: 25px;
+    padding: 15px;
+  }
+
+  .contact {
+    top:-50px;
+    right:20%;
   }
 
 }
