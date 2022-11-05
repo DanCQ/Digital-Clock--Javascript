@@ -56,7 +56,7 @@ body {
   position:absolute;
     right:28%;
     top:-50px;
-  
+  z-index:2;
 }
 
 .contact:hover {
