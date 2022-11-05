@@ -67,20 +67,20 @@ const backgroundUI = function (e) {
   const background = document.querySelector(".box"); //selects container background
   const timeClock = document.querySelector(".clock"); //selects clock face
 
-  if (e >= 6 && e <= 11) {
+  if (e >= 5 && e <= 9) {
     // console.log(background);
     background.style.background = 'url(https://i.postimg.cc/K8zpGz1c/1.jpg)';
     timeClock.style.color = "black";
   }
-  if (e >= 12 && e <= 17) {
+  if (e >= 10 && e <= 15) {
     background.style.background = 'url(https://i.postimg.cc/qvhcDCtK/2.jpg)';
     timeClock.style.color = "black";
   }
-  if (e >= 18 && e <= 22) {
+  if (e >= 16 && e <= 20) {
     background.style.background = 'url(https://i.postimg.cc/QMcQhGJx/3.jpg)';
     timeClock.style.color = "white";
   }
-  if (e >= 23 || e <= 5) {
+  if (e >= 21 || e <= 4) {
     background.style.background = 'url(https://i.postimg.cc/Y0DgbpM8/4.jpg)';
     timeClock.style.color = "white";
   }
