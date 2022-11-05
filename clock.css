@@ -1,5 +1,3 @@
-/* CSS comment */
-
 *,
 *::after,
 *::before {
@@ -13,10 +11,6 @@ a {
   text-decoration: none;
 }
 
-html {
-  box-sizing: border-box;
-}
-
 body {
   background-color: black;
   height: 100%;
@@ -24,17 +18,13 @@ body {
   overflow: hidden;
 }
 
-.box {
+.background {
   background-color: black;
   min-height: 100vh;
   min-width:100vw;
   display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.box:hover {
-  background-color: rgba(26, 26, 26, 0.1);
 }
 
 .clock {
@@ -83,12 +73,13 @@ body {
   .clock {
     font-size: 25px;
     max-width:60%;
-    padding: 15px;
+    padding: 20px;
   }
 
   .contact {
+    font-size:small;
     top:-50px;
-    right:20%;
+    right:25%;
   }
 
 }
