@@ -4,15 +4,24 @@ const clock = document.querySelector(".clock"); //selects clock face
 
 //allows clear view of the background picture
 clock.addEventListener("click", function() {
+
+  let contact = document.querySelector(".contact");
   
   background.style.backgroundSize = "contain";
   clock.style.visibility = "hidden";
+  contact.style.color = "black";
+  contact.style.textShadow = "0px 0px 2px lightsteelblue";
 
-  //sets everything back to normal
+  //sets back to normal
   setTimeout(function() {
     background.style.backgroundSize = "cover";
     clock.style.visibility = "visible";
   },5000); //waits 5 seconds to run
+
+  setTimeout(function() {
+    contact.style.color = "";
+    contact.style.textShadow = "";
+  },10000); //waits 10 seconds to run
 
 });
 
@@ -67,6 +76,7 @@ function timeStamp() {
   mm.innerHTML = minutes + daylight;
 }
 
+
 //creates a blinking effect for the colon (the seconds indicator)
 function seconds() {
   
@@ -107,6 +117,7 @@ const backgroundUI = function (hour) {
   background.style.backgroundRepeat = 'no-repeat';
   background.style.backgroundSize = 'cover';
 };
+
 
 //gets local date & time for use w/ backgroundUI() function
 const currentHour = function () {
