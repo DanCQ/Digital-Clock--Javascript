@@ -97,19 +97,19 @@ const backgroundUI = function (hour) {
   
   if (hour >= 5 && hour <= 9) {
 
-    background.style.background = 'url(https://i.postimg.cc/K8zpGz1c/1.jpg)';
+    background.style.background = 'url(images/1.jpg)';
     clock.style.color = "black";
   }
   if (hour >= 10 && hour <= 15) {
-    background.style.background = 'url(https://i.postimg.cc/qvhcDCtK/2.jpg)';
+    background.style.background = 'url(images/2.jpg)';
     clock.style.color = "black";
   }
   if (hour >= 16 && hour <= 20) {
-    background.style.background = 'url(https://i.postimg.cc/QMcQhGJx/3.jpg)';
+    background.style.background = 'url(images/3.jpg)';
     clock.style.color = "white";
   }
   if (hour >= 21 || hour <= 4) {
-    background.style.background =  'url(https://i.postimg.cc/Y0DgbpM8/4.jpg)';
+    background.style.background =  'url(images/4.jpg)';
     clock.style.color = "white";
   }
 
