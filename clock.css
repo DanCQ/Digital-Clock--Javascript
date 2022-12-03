@@ -10,6 +10,20 @@ a {
   text-decoration: none;
 }
 
+.analog {
+  background: radial-gradient(circle, transparent 68%,black 68.15%, grey 68.5%, silver 69.2%, silver 69.5%, grey 70.5%, grey 71%),
+  repeating-linear-gradient(10deg, transparent 0.1%, black 0.2%, transparent 0.3%, black 0.4%);
+  border-radius:100%;
+  display:flex;
+    align-items: center;
+    justify-content: center;
+  height:65vh;
+  opacity:0.8;
+  position:absolute;
+  width:65vh;
+  visibility:hidden;
+}
+
 body {
   background-color: black;
   height: 100%;
@@ -24,29 +38,6 @@ body {
   display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.clock {
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(9px);
-  background: rgba(105, 103, 103, 0.21);
-  border: 1px solid rgba(234, 230, 230, 0.13);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  font-size: 27.5px;
-  font-weight: 500;
-  letter-spacing: 2.5px;
-  line-height: 47.5px;
-  max-width: 70%;
-  min-width: 280px;
-  padding: 30px 50px 25px 50px;
-  text-align: center;
-}
-
-.clock:hover {
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
-  transition: box-shadow 0.3s ease;
 }
 
 .contact {
@@ -64,13 +55,64 @@ body {
   text-shadow: 0px 0px 2px lightsteelblue;
 }
 
+.digital {
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(9px);
+  background: rgba(105, 103, 103, 0.21);
+  border: 1px solid rgba(234, 230, 230, 0.13);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 27.5px;
+  font-weight: 500;
+  letter-spacing: 2.5px;
+  line-height: 47.5px;
+  max-width: 70%;
+  min-width: 280px;
+  padding: 30px 50px 25px 50px;
+  text-align: center;
+}
+
+.digital:hover {
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  transition: box-shadow 0.3s ease;
+}
+
+.hand {
+  border-radius: 10px;
+  position:absolute;
+    top:50%;
+  transform-origin:50% 0%;
+  transform:rotate(180deg);
+  transition: all 0.05s;
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+  width:5px;
+}
+
+.hour {
+  background-color: black;
+  height:34%;
+  z-index:2;
+}
+
+.minute {
+  background-color: white;
+  height:37%;
+  z-index:1;
+}
+
+.second {
+  background-color: red;
+  height:40%;
+}
+
 .hide {
   visibility: hidden;
 }
 
 @media screen and (max-width: 811px) {
 
-  .clock {
+  .digital {
     font-size: 25px;
     padding: 25px 15px;
   }
