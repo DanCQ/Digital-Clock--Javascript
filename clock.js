@@ -1,28 +1,22 @@
+const analog = document.querySelector(".analog"); //analog clock face
 const background = document.querySelector(".background"); //selects container background
-const clock = document.querySelector(".clock"); //selects clock face
+const digital = document.querySelector(".digital"); //digital clock face
 
 
-//allows clear view of the background picture
-clock.addEventListener("click", function() {
-
-  let contact = document.querySelector(".contact");
+//switches between analog and digital
+background.addEventListener("click", function() {
   
-  background.style.backgroundSize = "contain";
-  clock.style.visibility = "hidden";
-  contact.style.color = "black";
-  contact.style.textShadow = "0px 0px 2px lightsteelblue";
+  if(digital.style.visibility  == "hidden") {
 
-  //sets back to normal
-  setTimeout(function() {
-    background.style.backgroundSize = "cover";
-    clock.style.visibility = "visible";
-  },5000); //waits 5 seconds to run
+    digital.style.visibility = "visible";
+    analog.style.visibility  = "hidden";
 
-  setTimeout(function() {
-    contact.style.color = "";
-    contact.style.textShadow = "";
-  },10000); //waits 10 seconds to run
+  } else {
 
+    digital.style.visibility = "hidden";
+    analog.style.visibility  = "visible";
+  }
+  
 });
 
 
@@ -98,19 +92,19 @@ const backgroundUI = function (hour) {
   if (hour >= 5 && hour <= 9) {
 
     background.style.background = 'url(images/1.jpg)';
-    clock.style.color = "black";
+    digital.style.color = "black";
   }
   if (hour >= 10 && hour <= 15) {
     background.style.background = 'url(images/2.jpg)';
-    clock.style.color = "black";
+    digital.style.color = "black";
   }
   if (hour >= 16 && hour <= 20) {
     background.style.background = 'url(images/3.jpg)';
-    clock.style.color = "white";
+    digital.style.color = "white";
   }
   if (hour >= 21 || hour <= 4) {
     background.style.background =  'url(images/4.jpg)';
-    clock.style.color = "white";
+    digital.style.color = "white";
   }
 
   background.style.backgroundPosition = 'center';
