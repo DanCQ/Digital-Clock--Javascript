@@ -17,10 +17,10 @@ a {
   display:flex;
     align-items: center;
     justify-content: center;
-  height:50vh;
+  height:65vh;
   opacity:0.8;
   position:absolute;
-  width:50vh;
+  width:65vh;
   visibility:hidden;
 }
 
@@ -104,6 +104,8 @@ body {
 .minute {
   background-color: white;
   height:37%;
+  transition: all 0.05s;
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
   width:5px;
   z-index:1;
 }
@@ -119,6 +121,11 @@ body {
 
 
 @media screen and (max-width: 811px) {
+
+  .analog {
+    height:50vh;
+    width:50vh;
+  }
 
   .digital {
     font-size: 25px;
