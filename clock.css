@@ -10,34 +10,29 @@ a {
   text-decoration: none;
 }
 
-.analog {
+.analog { 
   background: radial-gradient(circle, transparent 68%,black 68.15%, grey 68.5%, silver 69.2%, silver 69.5%, grey 70.5%, grey 71%),
   repeating-linear-gradient(10deg, transparent 0.1%, black 0.2%, transparent 0.3%, black 0.4%);
   border-radius:100%;
   display:flex;
     align-items: center;
     justify-content: center;
-  height:65vh;
+  height:50vh;
   opacity:0.8;
   position:absolute;
-  width:65vh;
+  width:50vh;
   visibility:hidden;
 }
 
 body {
   background-color: black;
-  height: 100%;
   font-family: Roboto, "Arial Rounded MT Bold", sans-serif;
-  overflow: hidden;
-}
-
-.background {
-  background-color: black;
   min-height: 100vh;
   min-width:100vw;
   display: flex;
     align-items: center;
     justify-content: center;
+  overflow: hidden;
 }
 
 .contact {
