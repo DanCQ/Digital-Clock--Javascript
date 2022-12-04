@@ -16,7 +16,7 @@ background.addEventListener("click", function() {
     digital.style.visibility = "hidden";
     analog.style.visibility  = "visible";
   }
-  
+
 });
 
 
@@ -86,24 +86,32 @@ function seconds() {
 }
 
 
+//gets local date & time for use w/ backgroundUI() function
+const currentHour = function () {
+
+  const hourNow = new Date().getHours();
+  return hourNow;
+};
+
+
 //Changes background image based on user's time w/ const(currentHour)
 const backgroundUI = function (hour) {
   
   if (hour >= 5 && hour <= 9) {
 
-    background.style.background = 'url(images/1.jpg)';
+    background.style.background = 'url(images/1.jpeg)';
     digital.style.color = "black";
   }
   if (hour >= 10 && hour <= 15) {
-    background.style.background = 'url(images/2.jpg)';
+    background.style.background = 'url(images/2.jpeg)';
     digital.style.color = "black";
   }
   if (hour >= 16 && hour <= 20) {
-    background.style.background = 'url(images/3.jpg)';
+    background.style.background = 'url(images/3.jpeg)';
     digital.style.color = "white";
   }
   if (hour >= 21 || hour <= 4) {
-    background.style.background =  'url(images/4.jpg)';
+    background.style.background =  'url(images/4.jpeg)';
     digital.style.color = "white";
   }
 
@@ -113,12 +121,7 @@ const backgroundUI = function (hour) {
 };
 
 
-//gets local date & time for use w/ backgroundUI() function
-const currentHour = function () {
 
-  const hourNow = new Date().getHours();
-  return hourNow;
-};
 
 
 //runs function after html document loads
