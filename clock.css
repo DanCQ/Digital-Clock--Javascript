@@ -88,8 +88,6 @@ body {
     top:50%;
   transform-origin:50% 0%;
   transform:rotate(180deg);
-  transition: all 0.05s;
-  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
 }
 
 .hide {
@@ -113,6 +111,8 @@ body {
 .second {
   background-color: red;
   height:40%;
+  transition: all 0.05s;
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
   width:2.5px;
   z-index:0;
 }
