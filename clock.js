@@ -65,6 +65,29 @@ function timeStamp() {
 
   const mm = document.getElementById("mm"); //minute display
   mm.innerHTML = minutes + daylight;
+
+  
+  function analogClock() {
+
+    const hour = date.getHours();
+    const minute = date.getMinutes();
+    const second = date.getSeconds();
+  
+    const hourHand = document.querySelector(".hour");
+    const minuteHand = document.querySelector(".minute");
+    const secondHand = document.querySelector(".second");
+  
+    const hourDegree = ((hour / 12) * 360) + 180;
+    const minuteDegree = ((minute / 60) * 360) + 180;
+    const secondDegree = ((second / 60) * 360) + 180;
+    console.log(`hour:${hourDegree}, minute:${minuteDegree}, second:${secondDegree}`);
+  
+    hourHand.style.transform = `rotate(${hourDegree}deg)`;
+    minuteHand.style.transform = `rotate(${minuteDegree}deg)`;
+    secondHand.style.transform = `rotate(${secondDegree}deg)`;
+    
+  }
+  analogClock();
 }
 
 
