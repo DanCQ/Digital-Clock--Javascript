@@ -80,11 +80,23 @@ function timeStamp() {
     const hourDegree = ((hour / 12) * 360) + 180;
     const minuteDegree = ((minute / 60) * 360) + 180;
     const secondDegree = ((second / 60) * 360) + 180;
-    console.log(`hour:${hourDegree}, minute:${minuteDegree}, second:${secondDegree}`);
   
     hourHand.style.transform = `rotate(${hourDegree}deg)`;
     minuteHand.style.transform = `rotate(${minuteDegree}deg)`;
     secondHand.style.transform = `rotate(${secondDegree}deg)`;
+
+    if(secondDegree >= 530) {
+
+      secondHand.style.transition = "all 0s";
+
+      setTimeout(function() {
+
+        secondHand.style.transition = "all 0.05s";
+        secondHand.style.transitionTimingFunction = "cubic-bezier(0.1, 2.7, 0.58, 1)";
+
+      }, 3000);
+
+    }
     
   }
   analogClock();
