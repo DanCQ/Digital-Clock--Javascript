@@ -10,13 +10,10 @@ background.addEventListener("click", function() {
 
     digital.style.visibility = "visible";
     analog.style.visibility  = "hidden";
-
   } else {
-
     digital.style.visibility = "hidden";
     analog.style.visibility  = "visible";
   }
-
 });
 
 
@@ -119,9 +116,6 @@ const backgroundUI = function (hour) {
   background.style.backgroundRepeat = 'no-repeat';
   background.style.backgroundSize = 'cover';
 };
-
-
-
 
 
 //runs function after html document loads
