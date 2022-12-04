@@ -1,7 +1,8 @@
 # Digital-Clock--Javascript
 
-It's a digital clock dynamically running in real time.
-<br /> <br/>
+It's a digital clock dynamically running in real time. <br /> 
+On click, becomes an analog clock. <br/>
+
 It displays the current date and time, for the viewer's location, <br />
 with a matching background image.
 
