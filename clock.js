@@ -85,19 +85,26 @@ function timeStamp() {
     minuteHand.style.transform = `rotate(${minuteDegree}deg)`;
     secondHand.style.transform = `rotate(${secondDegree}deg)`;
 
-    if(secondDegree >= 530) {
+    if(secondDegree >= 528) {
 
       secondHand.style.transition = "all 0s";
 
       setTimeout(function() {
-
         secondHand.style.transition = "all 0.05s";
         secondHand.style.transitionTimingFunction = "cubic-bezier(0.1, 2.7, 0.58, 1)";
-
       }, 3000);
-
     }
-    
+
+    if(minuteDegree >= 534) {
+
+      minuteHand.style.transition = "all 0s";
+
+      setTimeout(function() {
+        minuteHand.style.transition = "all 0.05s";
+        minuteHand.style.transitionTimingFunction = "cubic-bezier(0.1, 2.7, 0.58, 1)";
+      }, 90000);
+    }
+
   }
   analogClock();
 }
