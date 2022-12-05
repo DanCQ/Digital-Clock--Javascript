@@ -86,7 +86,6 @@ function timeStamp() {
     secondHand.style.transform = `rotate(${secondDegree}deg)`;
 
     if(hourDegree >= 510) {
-
       hourHand.style.transition = "all 0s";
 
       setTimeout(function() {
@@ -96,7 +95,6 @@ function timeStamp() {
     }
 
     if(secondDegree >= 528) {
-
       secondHand.style.transition = "all 0s";
 
       setTimeout(function() {
@@ -106,7 +104,6 @@ function timeStamp() {
     }
 
     if(minuteDegree >= 534) {
-
       minuteHand.style.transition = "all 0s";
 
       setTimeout(function() {
