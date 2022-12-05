@@ -85,6 +85,16 @@ function timeStamp() {
     minuteHand.style.transform = `rotate(${minuteDegree}deg)`;
     secondHand.style.transform = `rotate(${secondDegree}deg)`;
 
+    if(hourDegree >= 510) {
+
+      hourHand.style.transition = "all 0s";
+
+      setTimeout(function() {
+        hourHand.style.transition = "all 0.05s";
+        hourHand.style.transitionTimingFunction = "cubic-bezier(0.1, 2.7, 0.58, 1)";
+      }, (60000 * 60) + 30000); //60 seconds * 60 = (1 hour) + 30 seconds
+    }
+
     if(secondDegree >= 528) {
 
       secondHand.style.transition = "all 0s";
@@ -92,7 +102,7 @@ function timeStamp() {
       setTimeout(function() {
         secondHand.style.transition = "all 0.05s";
         secondHand.style.transitionTimingFunction = "cubic-bezier(0.1, 2.7, 0.58, 1)";
-      }, 3000);
+      }, 3000); //waits 3 seconds
     }
 
     if(minuteDegree >= 534) {
@@ -102,7 +112,7 @@ function timeStamp() {
       setTimeout(function() {
         minuteHand.style.transition = "all 0.05s";
         minuteHand.style.transitionTimingFunction = "cubic-bezier(0.1, 2.7, 0.58, 1)";
-      }, 90000);
+      }, 90000); //wait 90 seconds
     }
 
   }
