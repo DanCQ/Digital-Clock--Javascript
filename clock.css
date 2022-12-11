@@ -14,6 +14,7 @@ a {
   background: radial-gradient(circle, transparent 68%,black 68.15%, grey 68.5%, white 69.2%, silver 69.5%, grey 70%, black 71%),
   repeating-linear-gradient(10deg, transparent 0.1%, black 0.2%, transparent 0.3%, black 0.4%);
   border-radius:100%;
+  cursor:pointer;
   display:flex;
     align-items: center;
     justify-content: center;
