@@ -1,6 +1,6 @@
 # Digital-Clock--Javascript
 
-It's a digital clock dynamically running in real time. <br /> 
+A JavaScript digital clock dynamically running in real time. <br /> 
 On click, becomes an analog clock. <br/>
 
 <a href="https://digital-clock--javascript.pages.dev/">Digital Clock</a>
