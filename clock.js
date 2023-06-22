@@ -3,22 +3,43 @@ const background = document.querySelector(".background"); //selects container ba
 const digital = document.querySelector(".digital"); //digital clock face
 
 
-//switches between analog and digital
-background.addEventListener("click", function() {
-  
-  if(digital.style.visibility  == "hidden") {
+//gets local date & time for use w/ backgroundUI() function
+const currentHour = function () {
 
-    digital.style.visibility = "visible";
-    analog.style.visibility  = "hidden";
-  } else {
-    digital.style.visibility = "hidden";
-    analog.style.visibility  = "visible";
+  const hourNow = new Date().getHours();
+  return hourNow;
+};
+
+
+//Changes background image based on user's time w/ const(currentHour)
+const backgroundUI = function (hour) {
+  
+  if (hour >= 5 && hour <= 9) {
+
+    background.style.background = 'url(https://i.postimg.cc/K8zpGz1c/1.jpg)';
+    digital.style.color = "black";
   }
-});
+  if (hour >= 10 && hour <= 15) {
+    background.style.background = 'url(https://i.postimg.cc/qvhcDCtK/2.jpg)';
+    digital.style.color = "black";
+  }
+  if (hour >= 16 && hour <= 20) {
+    background.style.background = 'url(https://i.postimg.cc/QMcQhGJx/3.jpg)';
+    digital.style.color = "white";
+  }
+  if (hour >= 21 || hour <= 4) {
+    background.style.background =  'url(https://i.postimg.cc/Y0DgbpM8/4.jpg)';
+    digital.style.color = "white";
+  }
+
+  background.style.backgroundPosition = 'center';
+  background.style.backgroundRepeat = 'no-repeat';
+  background.style.backgroundSize = 'cover';
+};
 
 
 //Gets calendar & clock text display
-function timeStamp() {
+function digitalClock() {
 
   const monthArray = [
     "January",
@@ -113,69 +134,46 @@ function timeStamp() {
     }
 
   }
+
   analogClock();
 }
 
 
-//creates a blinking effect for the colon (the seconds indicator)
+//creates a blinking effect for the seconds indicator
 function seconds() {
-  
+
   const colon = document.getElementById("colon");
   
-  if (colon.className != "hide") {
-    colon.className = "hide";
-    return colon;
-  } else {
-    colon.className = "";
-    return colon;
-  }
+  //acts like an On|Off switch
+  colon.classList.toggle('hide');
 }
 
 
-//gets local date & time for use w/ backgroundUI() function
-const currentHour = function () {
-
-  const hourNow = new Date().getHours();
-  return hourNow;
-};
-
-
-//Changes background image based on user's time w/ const(currentHour)
-const backgroundUI = function (hour) {
+//switches between analog and digital
+background.addEventListener("click", function() {
   
-  if (hour >= 5 && hour <= 9) {
+  if(digital.style.visibility  == "hidden") {
 
-    background.style.background = 'url(images/1.jpeg)';
-    digital.style.color = "black";
-  }
-  if (hour >= 10 && hour <= 15) {
-    background.style.background = 'url(images/2.jpeg)';
-    digital.style.color = "black";
-  }
-  if (hour >= 16 && hour <= 20) {
-    background.style.background = 'url(images/3.jpeg)';
-    digital.style.color = "white";
-  }
-  if (hour >= 21 || hour <= 4) {
-    background.style.background =  'url(images/4.jpeg)';
-    digital.style.color = "white";
-  }
+    digital.style.visibility = "visible";
+    analog.style.visibility  = "hidden";
 
-  background.style.backgroundPosition = 'center';
-  background.style.backgroundRepeat = 'no-repeat';
-  background.style.backgroundSize = 'cover';
-};
+  } else {
+
+    digital.style.visibility = "hidden";
+    analog.style.visibility  = "visible";
+  }
+});
 
 
 //runs function after html document loads
 window.onload = function() {
   
-  timeStamp(); //runs once without delay
+  digitalClock(); //runs once without delay
   backgroundUI( currentHour() ); //runs once without delay
   
   //avoids a refresh to see background change (runs every minute)
   setInterval(function () { backgroundUI( currentHour() ) }, 1000 * 60 ); 
   
-  setInterval(function () { timeStamp() }, 1000); //keeps time running every second (millisecond)
+  setInterval(function () { digitalClock() }, 1000); //keeps time running every second (millisecond)
   setInterval(function () { seconds() }, 1000 / 2); //runs twice per second (millisecond)
 };
