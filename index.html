@@ -18,32 +18,33 @@
 
     <link rel="stylesheet" type="text/css" href="clock.css" />
 
+    <!-- defer loads html first then JS -->
+    <script defer type="text/javascript" src="clock.js"></script>
+
     <title>Javascript Digital Clock</title>
   </head>
 
   <body class="background">
       
-      <div class="digital">
+    <div class="digital">
 
-          <span id="calendar"></span> <br>
-          <span id="hh"></span>
-          <span id="colon">:</span>
-          <span id="mm"></span>
-          
-          <a class="contact" href="https://dany-cervantes-portfolio.pages.dev/" target="_blank" >
-            Visit my portfolio
-          </a>
-          
-      </div>
+      <span id="calendar"></span> <br>
+      <span id="hh"></span>
+      <span id="colon">:</span>
+      <span id="mm"></span>
+      
+      <a class="contact" href="https://dany-cervantes-portfolio.pages.dev/" target="_blank" >
+        Visit my portfolio
+      </a>
+        
+    </div>
 
-      <div class="analog">
-        <div class="center"></div>
-        <div class="hand hour"></div>
-        <div class="hand minute"></div>
-        <div class="hand second"></div>
-      </div>
-
-    <script type="text/javascript" src="clock.js"></script>
+    <div class="analog">
+      <div class="center"></div>
+      <div class="hand hour"></div>
+      <div class="hand minute"></div>
+      <div class="hand second"></div>
+    </div>
     
   </body>
 </html>
