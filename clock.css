@@ -49,9 +49,9 @@ body {
 .contact {
   color:transparent;
   font-family: "zapfino", "luminari", "Academy Engraved Let";
-  font-size:medium;
+  font-size:small;
   position:absolute;
-    right:28%;
+    right:25%;
     top:-50px;
   z-index:2;
 }
