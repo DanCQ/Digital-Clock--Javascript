@@ -61,7 +61,7 @@ function digitalClock() {
     "Monday",
     "Tuesday",
     "Wednesday",
-    "Thrusday",
+    "Thursday",
     "Friday",
     "Saturday",
   ];
